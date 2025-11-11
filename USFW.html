@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--favicon-->
+    <link rel="icon" href="logo/QUAKERS-removebg-preview.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>U.S.F.W - Kakamega Year Meeting of Friends Church</title>
+</head>
+<body>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#x1F815</span>
+    </div>
+    <!--top-footer-->
+    <section class="top-footer">
+        <div class="box">
+            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="text-1">
+                    <a href="contact.html">Kakamegayearlymeeting1@gmail.com</a>
+                </div>
+            <div class="icon"><i class="fa fa-street-view" aria-hidden="true"></i></i></i></div>
+                    <div class="text-1">
+                        <p>Kakamega, Kenya</p>
+                    </div> 
+            <div class="social-link-list">
+                <a href="https://www.facebook.com/KYMQuaker" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://youtube.com/@kakamegayearlymeetingoffriends?si=zv_KSbzAY8NvLShc" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+            </div>           
+        </div>
+    </section>
+    <!--navmenus-->
+    <header>
+
+        <div class="logo-wrapper">
+            <img src="logo/QUAKERS-removebg-preview.png" class="logo">
+            <h1 class="logo-text">Kakamega Year Meeting<br>of Friends Church<br>(Quakers)</h1>
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Programs 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="Quakermen.html">Quakermen</a></li>
+                        <li><a href="USFW.html">U.S.F.W</a></li>
+                        <li><a href="youth.html">Young Friends Program</a></li>
+                        <li><a href="qcm.html">Q.C.M</a></li>
+                    </ul>
+                </li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script>
+        let menuToggle = document.querySelector('.menuToggle');
+            let header = document.querySelector('header');
+            menuToggle.onclick = function(){
+            header.classList.toggle('active');
+            }
+    </script>
+</body>
+</html>

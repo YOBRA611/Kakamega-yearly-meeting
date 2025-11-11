@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--favicon-->
+    <link rel="icon" href="logo/QUAKERS-removebg-preview.png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>About - Kakamega Year Meeting of Friends Church</title>
+</head>
+    <style>
+        .hero-about{
+            background: url(images/1.png);
+            background-size: cover;
+            height: 50vh;
+        }
+        .content{
+            text-align: center;
+            position: absolute;
+            top: 39%;
+            left: 10%;
+        }
+        .content h2{
+            color: rgb(255, 255, 255);
+            font-size: 55px;
+            text-shadow: 5px 5px 5px rgba(20, 20, 20, 0.8);
+        }
+        .content a{
+            color: #ffffff;
+            font-size: 23px;
+            text-shadow: 5px 5px 5px rgba(20, 20, 20, 0.8);
+            text-decoration: underline;
+            font-family: "Jost", sans-serif;
+        }
+        .content a:hover{
+            color: #3d56ff;
+        }
+        /*styling about-section*/
+        .about-section{
+            background-color: #3d56ff;
+            padding: 40px;
+            border: 50px;
+        }
+        .container{
+            display: flex;
+            gap: 70px;
+        }
+        .top h3{
+            color: #fff;
+            font-size: 30px;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        .top .about-text{
+            color: #fff;
+            font-size: 19px;
+            text-align: justify;
+             margin-bottom: 50px;
+        }
+        .image-section img{
+            width: 550px;
+            height: 60vh;
+            margin-bottom: 80px;
+        }
+        
+        .box-content{
+            box-shadow: 0px 2px 20px rgb(10, 10, 10);
+            background: #f8f8f8;
+            padding: 20px;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            width: 100%;
+            height: 35vh;
+            padding-right: calc(var(--bs-gutter-x)* .5);
+            padding-left: calc(var(--bs-gutter-x)* .5);
+            display: block;
+            margin-top: 40px;
+        }
+        .box-content h3{
+            font-size: 28px;
+            color: #1f1f1f; 
+        }
+        .box-content a{
+            color: rgb(39, 16, 0);
+            background-color: #66666694;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 70px;
+            gap: 40px;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+        
+        .box-content a:hover{
+            background-color: #0000008d;
+            color: white;
+        }
+        .box-content .pdf:hover{
+            color: white;
+        }
+        /*styling our team*/
+        .team-section{
+            background-image: url(images/Whatsap.jpg);
+            background-size: cover;
+            min-height: 20vh;
+            padding: 25px;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 60px;
+            padding-top: 60px;
+        }
+        .team-section h2{
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        .team-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .team-member{
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgb(10, 10, 10);
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .team-member:hover{
+            transform: translateY(-10px);
+        }
+        .team-member img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid  rgb(235, 156, 10);
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .team-member h3{
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+        }
+        .team-member .heading{
+            font-size: 18px;
+            color: #3f2611;
+            margin-bottom: 10px;
+        }
+        .team-member .words{
+            font-size: 16px;
+            font-weight: 500;
+            color: #3f2611;
+            line-height: 20px;
+        }
+        /*styling gallery*/
+        .gallery--{
+            background-color: rgb(0, 15, 37);
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .gallery-- h2{
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+        }
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+            transition: .3s ease;
+        }
+        .column img:hover{
+            transform: translateY(-3px);
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+        .table-monthly {
+            overflow-x: auto;
+            margin-top: 50px;
+        }
+        .table-monthly h2{
+            color: #fff;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .table-monthly p{
+            color: #fff;
+            font-size: 20px;
+        }
+        .table-container h2{
+            color: #fff;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .table-container p{
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+            font-size: 18px;
+        }
+        th {
+            background-color: #a5a5a5;
+        }
+        .accordion {
+            background-color: #002ec7;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .accordion::before {
+            content: "\002B"; /* plus sign */
+            font-weight: bold;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+        .accordion.active::before {
+            content: "\2212"; /* minus sign */
+        }
+        .accordion.active {
+            background-color: #3d0baf;
+        }
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #f7f7f7;
+            transition: max-height 0.4s ease;
+            padding: 0 15px;
+        }
+        .panel p {
+            padding: 10px 0;
+            margin: 0;
+            color: black;
+        }
+        /* our philosophy */
+        .our-value{
+            background-color: #3d56ff;
+        }
+        .core-value{
+            padding: 15px 9%;
+            padding-bottom: 70px;
+        }
+        .core-value .core-heading{
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            color: #ffffff;
+            font-size: 40px;
+        }
+        .core-value .core-text{
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+        }
+        .core-value .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 50px;
+        }
+        .core-value .box-container .box{
+            box-shadow: 1px 1px rgb(0, 0, 0);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.842);
+            text-align: center;
+            padding: 30px 20px;
+        }
+        .core-value .box-container .box .prof{
+            width: 100px;
+            background: #3d56ff;
+            padding: 20px;
+            border-radius: 50px;
+        }
+        .core-value .box-container .box .prof:hover{
+            transform: scale(1.03);
+        }
+        .core-value .box-container .box h3{
+            color: rgb(87, 50, 3);
+            font-size: 30px;
+            padding: 20px 0;
+        }
+        .core-value .box-container .box p{
+            font-size: 18px;
+            line-height: 20px;
+        }
+        .core-value .box-container .box:hover{
+            box-shadow: 0px 4px 8px rgb(10, 10, 10);
+            transform: scale(1.03);
+        }
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+        .column {
+            flex: 50%;
+            max-width: 50%;
+        }
+        }
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .hero-about{
+                height: 30vh;
+            }
+            .content{
+                top: 24%;
+                left: 10%;
+            }
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 1115px){
+            .image-section img{
+                width: 500px;
+                height: 50vh;
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 1050px){
+            .image-section img{
+                width: 450px;
+                height: 50vh;
+                margin-top: 40px;
+            }
+        }
+        @media (max-width: 900px){
+            .content{
+                left: 9%;
+            }
+            .container{
+                display: inline;
+                gap: 10px;
+            }
+            .top h3{
+                margin-top: 5px;
+            }
+            .top .about-text{
+                margin-bottom: 20px;
+            }
+            .image-section img{
+                width: 310px;
+                height: 40vh;
+                margin-top: 20px;
+            }
+            .about-section{
+                padding: 30px;
+                border: 20px;
+            }
+            .box-content{
+                margin-top: 20px;
+            }
+        }
+    </style>
+<body>
+    <!--scrollbutton-->
+    <div id="progress">
+        <span id="progress-value">&#x1F815</span>
+    </div>
+    <!--top-footer-->
+    <section class="top-footer">
+        <div class="box">
+            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="text-1">
+                    <a href="contact.html">Kakamegayearlymeeting1@gmail.com</a>
+                </div>
+            <div class="icon"><i class="fa fa-street-view" aria-hidden="true"></i></i></i></div>
+                    <div class="text-1">
+                        <p>Kakamega, Kenya</p>
+                    </div> 
+            <div class="social-link-list">
+                <a href="https://www.facebook.com/KYMQuaker" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://youtube.com/@kakamegayearlymeetingoffriends?si=zv_KSbzAY8NvLShc" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+            </div>           
+        </div>
+    </section>
+    <!--navmenus-->
+    <header>
+
+        <div class="logo-wrapper">
+            <img src="logo/QUAKERS-removebg-preview.png" class="logo">
+            <h1 class="logo-text">Kakamega Year Meeting<br>of Friends Church<br>(Quakers)</h1>
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Programs 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-content">
+                        <li><a href="Quakermen.html">Quakermen</a></li>
+                        <li><a href="USFW.html">U.S.F.W</a></li>
+                        <li><a href="youth.html">Young Friends Program</a></li>
+                        <li><a href="qcm.html">Q.C.M</a></li>
+                    </ul>
+                </li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <!--heros about-->
+    <section class="hero-about">
+        <div class="content" style="font-family: Jost, sans-serif;">
+            <h2>About</h2>
+            <a href="index.html">Home</a>
+        </div>
+    </section>
+    <!--About-section-->
+    <section class="about-section">
+        <div class="container">
+            <div class="content-section">
+                <div class="top">
+                    <h3 data-aos="fade-up" data-aos-delay="100">Our history</h3>
+                        <p class="about-text" data-aos="fade-up" data-aos-delay="200">Kakamega Yearly Meeting of Friends (Quakers) came into operation after being granted authority to run as a Yearly Meeting by East Africa <br>Yearly Meeting-Kaimosi during an Annual Delegates Conference that was held in 1993.
+                        <br>Upon being granted Yearly Meeting status, we had our first Annual Delegates Conference in the year 1994 held at Kakamega Friends Church -Amalemba.<br>The Yearly Meeting Headquarters was situated at Kakamega Friends Church from the year 1994 to 2016 when we relocated to Handidi Friends Church. Handidi Friends Church hosted the Yearly Meeting from the Year 2016 to 2024.
+                    </p>
+                </div>
+            </div>
+            <div class="image-section" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/Whatsapp.jpg">
+            </div>
+        </div>
+        <div class="table-container">
+            <h2  data-aos="fade-up" data-aos-delay="400">Clerks and General Superintendents Who Have Served</h2>
+            <p  data-aos="fade-up" data-aos-delay="500">The Yearly Meeting has been served by various Clerks and General Superintendents as shown below:</p>
+            <table  data-aos="fade-up" data-aos-delay="100">
+            <thead>
+                <tr>
+                <th>Name of Clerk</th>
+                <th>Name of General Superintendent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Blastus Wawire Barasa</td>
+                <td>Pastor Meshack Musindi</td>
+                </tr>
+                <tr>
+                <td>Nicholas Waudo</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Jared Wangia</td>
+                <td>Pastor Patrick Lumumba Muganda</td>
+                </tr>
+                <tr>
+                <td>Andrew Lumula</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Simon Shigali</td>
+                <td>Pastor Hannington Atenya</td>
+                </tr>
+                <tr>
+                <td>Levi Kisato</td>
+                <td></td>
+                </tr>
+                <tr>
+                <td>Paul Kisiangani</td>
+                <td>Pastor Joseph Mmbele Shamala</td>
+                </tr>
+                <tr>
+                <td>Eric Lung’aho Lijodi</td>
+                <td></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="box-container">
+            <div class="content-section">
+                <div class="top">
+                    <h3  data-aos="fade-up" data-aos-delay="700">Our vision</h3>
+                        <p class="about-text"  data-aos="fade-up" data-aos-delay="800">To be the most trusted and impactful center for spiritual nourishment and transformation in Kenya — where people of all ages grow in faith, 
+                            experience genuine fellowship, and live out Christ-like values in their daily lives.
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="content-section">
+                <div class="top">
+                    <h3  data-aos="fade-up" data-aos-delay="900">Our Mission</h3>
+                        <p class="about-text"  data-aos="fade-up" data-aos-delay="1000">To consistently remain united in preaching the gospel of peace, spiritual growth and economic empowerment through
+                        properly co-ordinated activities based on acceptable social values that will attract an increase in our faith.</p>
+                </div>
+            </div>
+            <div class="box-content"  data-aos="fade-up" data-aos-delay="1200">
+                    <h3>Download Constitution</h3>
+                    <hr>
+                <div class="download">
+                    <a href="docs/Kakamega Yearly meeting Constitution.pdf">
+                        <i class="fa fa-file-pdf"></i>
+                        <span>Constitution PDF</span>
+                    </a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="table-monthly">
+            <h2 data-aos="fade-up" data-aos-delay="100">Our Monthly Meetings</h2>
+            <p   data-aos="fade-up" data-aos-delay="200">The Yearly Meeting has a total of 21 Monthly Meeting and over 51 Village Meeting. Below is the list:</p>
+            
+            <button class="accordion" data-aos="fade-up" data-aos-delay="100">Kakamega M.M</button>
+            <div class="panel">
+            <p>1. kakamega V.M<br>2. Murhembe V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="200">Nabongo M.M</button>
+            <div class="panel">
+            <p>1. Nabongo V.M<br>2. Kefinco V.M<br>3. Irhumbi V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="300">Mumias M.M</button>
+            <div class="panel">
+            <p>1. Shibale V.M<br>2. Mumias Township V.M<br>3. Matawa V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="400">Ejinja M.M</button>
+            <div class="panel">
+            <p>1. Ejinja V.M<br>2. Ikonyero V.M<br>3. Shiyunzu V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="500">Shimanyiro M.M</button>
+            <div class="panel">
+            <p>1. Shimanyiro V.M<br>2. Ikong'olo V.M<br>3. Imolomonye V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="600">Shiduha M.M</button>
+            <div class="panel">
+            <p>1. Shiduha V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="700">Shikulu M.M</button>
+            <div class="panel">
+            <p>1. Shikulu V.M<br>2. Emurumba V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="800">Ivuvi M.M</button>
+            <div class="panel">
+            <p>1. Ivuvi V.M<br>2. Emabanga V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="900">Ichina M.M</button>
+            <div class="panel">
+            <p>1. Ichina V.M<br>2. Ematore V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1000">Ibwali M.M</button>
+            <div class="panel">
+            <p>1. Ibwali V.M<br>2. Imulama V.M<br>3. Musoli Township V.M<br>4. Irechelo V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1100">Malimili M.M</button>
+            <div class="panel">
+            <p>1. Malimili V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1200">Munzakula M.M</button>
+            <div class="panel">
+            <p>1. Munzakula V.M<br>2. Ebambwa V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1300">Handidi M.M</button>
+            <div class="panel">
+            <p>1. Handidi  V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1400">Bukhaywa M.M</button>
+            <div class="panel">
+            <p>1. Bukhaywa V.M<br>2. Madero V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1500">Ikonyero M.M</button>
+            <div class="panel">
+            <p>1. Lubao V.M<br>2. Ikonyero V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1600">Buyangu M.M</button>
+            <div class="panel">
+            <p>1. Buyangu V.M<br>2. IndeteV.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1700">Shanderema M.M</button>
+            <div class="panel">
+            <p>1. Shanderema V.M<br>2. Shianda V.M<br>3. Musembe V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1800">Mugango M.M</button>
+            <div class="panel">
+            <p>1. Mugango V.M<br>2. Irungu V.M<br>3. Lukusi V.M<br>4. Mutsulio<br>5. Shitoshe</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="1900">Ingolomosio M.M</button>
+            <div class="panel">
+            <p>1. Ingolomosio V.M<br>2. Vihuna V.M</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="2000">Mituli M.M</button>
+            <div class="panel">
+            <p>1. Mituli V.M<br>2. Meriwet V.M<br>3. Shilongo V.M<br>4. Kamwega</p>
+            </div>
+
+            <button class="accordion" data-aos="fade-up" data-aos-delay="2100">Shikoti M.M</button>
+            <div class="panel">
+            <p>1. Shikoti V.M<br>2. Emachembe V.M<br>3. Shikangania V.M</p>
+            </div>
+
+        </div>
+    </section>
+    <!--leadership-->
+    <section class="team-section">
+        <h2 data-aos="fade-up" data-aos-delay="100">Leadership</h2>
+        <div class="team-container">
+            <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/545244401_1434160662046255_7353922043021237332_n.jpg" >
+                <h3>Erick Lijodi</h3>
+                <p class="heading">Presiding Clerk</p>
+                <p class="words">"Beloved in Christ, your presence in fellowship strengthens the body. Keep standing firm in the Lord."</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/WhatsApp Image 2025-10-02 at 19.39.53_30aebee22.jpg" >
+                <h3>Jack Anyanje</h3>
+                <p class="heading">Vice - Presiding Clerk</p>
+                <p class="words"> "Even in quiet obedience, God sees your faith. Keep walking in faith — He is faithful."</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/498131766_1288136106051504_67927548842445625_n.jpg" >
+                <h3>Pst. Joseph Shamala</h3>
+                <p class="heading">General Superintendent</p>
+                <p class="words">"Your prayers, support, and love do not go unnoticed. The church grows stronger because of you."</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/WhatsApp Image 2025-10-13 at 10.30.05_fc8d57aa1.jpg" >
+                <h3>Oliver Shibonje</h3>
+                <p class="heading">Recording Clerk</p>
+                <p class="words">"Stay rooted in the Word, and you will flourish like a tree planted by living waters."</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="500">
+                <img src="images/481085286_1220767539455028_7333248106729664459_n.jpg" >
+                <h3>Mark Aliata</h3>
+                <p class="heading">Vice - Recording Clerk</p>
+                <p class="words">"Keep serving with joy, giving with love, and worshipping with passion. Your labor is not in vain."</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="600">
+                <img src="Images/PASSPORT (2).jpg" >
+                <h3>Leah Barasa</h3>
+                <p class="heading">Treasurer</p>
+                <p class="words">"God has placed gifts in you — use them boldly for His glory. The church needs your light."</p>
+            </div>
+            <div class="team-member" data-aos="fade-up" data-aos-delay="700">
+                <img src="images/508517500_23905535972416056_295049500869921635_n.jpg" >
+                <h3>Amoi Douglas</h3>
+                <p class="heading">Admin</p>
+                <p class="words">"Thank you for your faithfulness. It’s a pillar of strength to this community."</p>
+            </div>
+        </div>
+    </section>
+    <!--gallery-->
+    <section class="gallery--">
+        <h2>Gallery</h2>
+        <div class="row">
+            <div class="column">
+                <img src="images/WhatsApp Image 2025-09-29 at 11.56.44_3ae0d008.jpg">
+                <img src="images/WhatsApp Image 2025-09-29 at 11.56.38_2fdda9e2.jpg">
+                <img src="images/WhatsApp Image 2025-09-29 at 11.56.46_0912f71d.jpg">
+                <img src="images/487209301_1242757227256059_888126735123564199_n.jpg">
+                <img src="images/545244401_1434160662046255_7353922043021237332_n.jpg">
+                <img src="images/498131766_1288136106051504_67927548842445625_n.jpg">
+                <img src="images/481177692_1220767239455058_5318617711645646697_n.jpg">
+                <img src="images/481663338_1220767556121693_4479038643631798443_n.jpg">
+            </div>
+            <div class="column">
+                <img src="images/Whatsapp.jpg">
+                <img src="images/WhatsApp Image 2025-09-29 at 11.56.43_d62fb5eb.jpg">
+                <img src="images/481085286_1220767539455028_7333248106729664459_n.jpg">
+                <img src="images/308634831_468648458640535_400922312300871769_n.jpg">
+                <img src="images/486681499_1089202633251778_289022121644601860_n.jpg">
+                <img src="images/WhatsApp Image 2025-09-29 at 11.56.43_96a8ad7b.jpg">
+            </div>
+            <div class="column">
+                <img src="images/480729640_617905117609824_8550935139493492330_n.jpg">
+                <img src="images/WhatsApp Image 2025-09-29 at 11.56.45_0afd5f77.jpg">
+                <img src="images/481200768_1220767576121691_6397619668579632016_n.jpg">
+                <img src="images/481213145_1220767262788389_4656939674670641597_n.jpg">
+                <img src="images/482337624_1220767089455073_3198759544617764149_n.jpg">
+                <img src="images/481663338_1220767556121693_4479038643631798443_n.jpg">
+                <img src="images/481197383_622137773853225_5344061806554049697_n.jpg">
+            </div>
+            <div class="column">
+                <img src="images/530678486_820357347613656_4055764829602899251_n.jpg">
+                <img src="images/481337804_1220767579455024_1865044095038389685_n.jpg">
+                <img src="images/481243169_1220767569455025_4965650319327824059_n.jpg">
+                <img src="images/485149452_696717823310943_7882698529323320617_n.jpg">
+                <img src="images/481348677_1220767226121726_4759521745087187883_n.jpg">
+                <img src="images/481164075_1220767256121723_2425028835496110001_n.jpg">
+                <img src="images/486196613_1084996080339100_8501242714753689618_n.jpg">
+                <img src="images/485147449_696717433310982_9074936413388367601_n.jpg">
+            </div>
+        </div>
+    </section>
+    <!--our philosophy-->
+    <section class="our-value">
+        <div class="core-value">
+            <h1 class="core-heading" data-aos="fade-up" data-aos-delay="100">Our Philosophy & Strategies</h1>
+            <p class="core-text" data-aos="fade-up" data-aos-delay="200">At the heart of our ministry, Kakamega Yearly Meeting is deeply commitment to the Quaker Testimonies
+                 timeless values that shape who we are and how we serve. These principles are not just beliefs; they are actions we live by every day. Being rooted in the belief that
+                  there is that of God in everyone, we seek to reflect Christ’s love through:
+            </p>
+            <h2 class="core-heading" data-aos="fade-up" data-aos-delay="300">Quaker core values<br>(S.P.I.C.E.S)</h2>
+            <div class="box-container">
+                <div class="box" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/depositphotos_60081357-stock-illustration-choice-target-icon-on-white-removebg-preview.png" class="prof">
+                <h3>Simplicity</h3>
+                <p>Quakers believe in living simply by focusing on what is essential and removing distractions 
+                    that keep us from God and from loving one another. Simplicity does not mean poverty, but freedom
+                     from greed, materialism, and waste. It calls us to use resources wisely, speak with clarity, 
+                    and live in a way that reflects spiritual depth rather than outward display.
+                </p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/images-removebg-preview (2).png" class="prof">
+                <h3>Peace</h3>
+                <p>The Peace Testimony is one of the best-known Quaker values. Friends believe that
+                     violence and war are inconsistent with God’s will. Instead, we seek nonviolent 
+                     ways to resolve conflicts, promote reconciliation, and act as peacemakers in our 
+                     communities and the wider world. 
+                    Quakers work for justice and equality as foundations for true peace.
+                </p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="300">
+                    <img src="Images/honesty.png" class="prof">
+                <h3>Integrity</h3>
+                <p>Quakers hold that truthfulness and honesty are central to the spiritual life. 
+                    Integrity means consistency between belief and action being the same person in private as in public.
+                     It means keeping promises, being trustworthy, and avoiding deceit. 
+                    Integrity challenges us to live authentic lives, where faith is reflected in daily choices.
+                </p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/community-support-symbol-logo-graphic-inclusive-community-icon-unity-and-support-design-vector-removebg-preview.png" class="prof">
+                <h3>Community</h3>
+                <p>Quakers understand that faith is lived out in community, not in isolation. 
+                    We value supporting and caring for one another, recognizing that we are stronger 
+                    when we walk together. Community calls us to share our gifts, meet the needs of others, 
+                    and extend hospitality and fellowship beyond our own circles into the wider world.
+                </p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="500">
+                    <img src="images/istockphoto-1127427507-612x612-removebg-preview.png" class="prof">
+                <h3>Equality</h3>
+                <p>The Equality Testimony affirms that every person has worth because
+                    we are all children of God. Friends reject discrimination based on 
+                    race, gender, class, or background, and instead promote fairness and 
+                    justice. Equality calls us to stand against oppression and ensure that every voice, 
+                    especially those of the marginalized, is heard and respected.
+                </p>
+                </div>
+                <div class="box" data-aos="fade-up" data-aos-delay="600">
+                    <img src="images/10966459-removebg-preview.png" class="prof">
+                <h3>Stewardship</h3>
+                <p>Quakers believe we are caretakers of God’s creation. Stewardship means 
+                    using resources responsibly, caring for the earth, and considering future 
+                    generations in our decisions. This value challenges us to live sustainably, reduce waste, and 
+                    protect the natural world as an expression of love for God and for our neighbors.
+                </p>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!--footer section-->
+    <footer>
+        <div class="footer-col">
+            <h2>ABOUT</h2>
+            <p>Shalom & Welcome!...<br>
+                At Kakamega Yearly Meeting of Friends Church (Quakers), we warmly invite you to journey with us in faith, rooted in the timeless Quaker values of Simplicity, Peace, Integrity, Community, Equality, and Stewardship (SPICES).
+                Together, we grow in love, serve with purpose, and live out the light of Christ in every action.</p>
+        </div>
+        <div class="footer-col">
+            <h2>QUICK LINKS</h2>
+            <ul class="list">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2>FOLLOW US</h2>
+            <div class="social-icons">
+                <li><a href="https://www.facebook.com/KYMQuaker"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://youtube.com/@kakamegayearlymeetingoffriends?si=zv_KSbzAY8NvLShc"><i class="fab fa-youtube"></i></a></li>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h2>OUR ADDRESS</h2>
+            <p>Kakamega Yearly Meeting<br>Kakamega, Kenya<br>P.O Box 465 - 50100</p>
+            <p>Email: Kakamegayearlymeeting1@gmail.com<br>Phone: +254(0)711 476 770</p>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy;2025 Kakamega yearly Meeting . All rights reserved</p>
+        </div>
+    </footer>
+    <!--crafted-->
+    <section class="bottom-footer">
+        <div class="craft">
+            <p>Crafted @  <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services"> bravitech soln</a></p>
+        </div>
+    </section>
+    </main>
+
+     <!-- AOS & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({ duration: 1500, once: true });
+
+        let menuToggle = document.querySelector('.menuToggle');
+            let header = document.querySelector('header');
+            menuToggle.onclick = function(){
+            header.classList.toggle('active');
+            }
+
+            let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollValue = Math.round((pos * 100)/calcHeight);
+            if (pos > 100) {
+                scrollProgress.style.display = "grid";
+            } else {
+                scrollProgress.style.display = "none";
+            }
+            scrollProgress.addEventListener("click", () => {
+                document.documentElement.scrollTop = 0;
+            });
+            scrollProgress.style.background = `conic-gradient(#3d56ff ${scrollValue}%, white ${scrollValue}%)`;
+        };
+
+        window.onscroll = calcScrollValue;
+        window.onload = calcScrollValue;
+
+        const acc = document.querySelectorAll(".accordion");
+
+        acc.forEach(button => {
+            button.addEventListener("click", function () {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+
+            if (this.classList.contains("active")) {
+                panel.style.maxHeight = panel.scrollHeight + "px"; 
+            } else {
+                panel.style.maxHeight = null;
+            }
+            });
+        });
+    </script>
+</body>
+</html>
